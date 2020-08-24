@@ -70,3 +70,6 @@ PS C:\Users\PradNrip\source\repos\acromaniac.client.ionic> ionic capacitor add a
 ionic build
 
 3. ionic capacitor run android
+
+push www directory to respective platform
+4. npx cap copy
