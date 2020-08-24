@@ -53,6 +53,7 @@ Run following commands:
 
 1. ionic integrations enable capacitor
 2. ionic capacitor add android
+
 Issue:
 PS C:\Users\PradNrip\source\repos\acromaniac.client.ionic> ionic capacitor add android
 > capacitor.cmd add android
