@@ -1,4 +1,4 @@
-# help
+# How to
 Keyboard shortcuts for Windows 10 
 
 Win + D             Minimize all open windows (Works as toggle button)
