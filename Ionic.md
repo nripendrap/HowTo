@@ -70,12 +70,14 @@ Run IIS Express as admin. To run IIS Express as admin, Open Visual studio as adm
 
 
 
-# Get the current network status
+Get the current network status
+================================
+```
 import { Plugins } from '@capacitor/core';
 
 const { Network } = Plugins;
 
 // Get the current network status
 let status = await Network.getStatus();
-
+```
 
