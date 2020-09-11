@@ -74,12 +74,14 @@ Could not read script '<other path>\android\capacitor-cordova-android-plugins\co
 Delete android folder
 Rebuild
 
-# Get the current network status
+Get the current network status
+================================
+```
 import { Plugins } from '@capacitor/core';
 
 const { Network } = Plugins;
 
 // Get the current network status
 let status = await Network.getStatus();
-
+```
 
