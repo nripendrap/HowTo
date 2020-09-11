@@ -68,7 +68,11 @@ as
 
 Run IIS Express as admin. To run IIS Express as admin, Open Visual studio as admin and run the project. 
 
+Issue #6
+Could not read script '<other path>\android\capacitor-cordova-android-plugins\cordova.variables.gradle' as it does not exist
 
+Delete android folder
+Rebuild
 
 # Get the current network status
 import { Plugins } from '@capacitor/core';
