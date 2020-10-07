@@ -10,9 +10,12 @@ Win + S | Open Cortana in text mode, so you can type in the search bar
 Win + Q | Open Cortana in text mode, so you can type in the search bar
 Ctrl + W | Close window
 Ctrl + Shift + W | Close window
+Win + V | Open clipboard manager
+#### Browser
+Key | Description
+-- | --
 Ctrl + Left Click | Open link in a new tab
 Ctrl + Enter | Open link in a new tab
-Win + V | Open clipboard manager
 #### Multiple desktops
 Key | Description
 -- | --
@@ -23,7 +26,7 @@ Win + Ctrl + Right Arrow  | Switch Desktop
 Win + Ctrl + F4 | Close the desktop, you're currently on
 
 ### Add or remove user from group
-Steps\
+Steps
 1. Win + R
 2. lusrmgr.msc
 3. Local Users and Groups app
