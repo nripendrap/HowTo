@@ -9,10 +9,10 @@ Win + S / Win + Q | Open Cortana in text mode, so you can type in the search bar
 Ctrl + W | Close window
 Ctrl + Shift + W | Close window
 
-| Ctrl + Left Click | Open link in a new tab |
-| Ctrl + Enter | Open link in a new tab |
+Ctrl + Left Click | Open link in a new tab
+Ctrl + Enter | Open link in a new tab
 
-| Win + V | Open clipboard manager |
+Win + V | Open clipboard manager
 
 #### Multiple desktops
 Win + Tab       Open task view / desktop view    \
