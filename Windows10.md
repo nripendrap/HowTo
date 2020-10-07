@@ -25,6 +25,10 @@ Win + Ctrl + Left Arrow | Switch Desktop
 Win + Ctrl + Right Arrow  | Switch Desktop
 Win + Ctrl + F4 | Close the desktop, you're currently on
 
+### Useful commands
+netstat\
+telnet
+
 ### Add or remove user from group
 Steps
 1. Win + R
