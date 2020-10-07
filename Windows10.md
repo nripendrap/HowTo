@@ -34,7 +34,7 @@ Steps
 ### PowerShell
 #### Execution policy
 
-```Get-ExecutionPolicy```
+```Get-ExecutionPolicy```\
 ```Get-ExecutionPolicy -list```
 
 ```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```
