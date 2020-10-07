@@ -27,7 +27,9 @@ Win + Ctrl + F4 | Close the desktop, you're currently on
 
 ### Useful commands
 netstat\
-telnet
+
+telnet\
+Checks ports whether they are open or not
 
 ### Add or remove user from group
 Steps
