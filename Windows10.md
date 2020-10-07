@@ -2,7 +2,7 @@
 
 ### Keyboard shortcuts
  Keys | Descriptions 
-- | -
+-- | --
 Win + D | Minimize all open windows (Works as toggle button)
 Win + Down Arrow | Minimize active window
 Win + S / Win + Q | Open Cortana in text mode, so you can type in the search bar
