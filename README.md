@@ -16,16 +16,3 @@ The "Manage Client-Side Libraries" command opens libman.json to allow you to rem
 We understand that this is a little confusing, so we'll keep this item open to review the UX for the feature.
 
 
-
-
-Installed 
-
---Terminal
-Node.js
-Git
-
-Get-ExecutionPolicy
-Get-ExecutionPolicy -list
- -- default: Restricted
-
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser

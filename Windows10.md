@@ -30,3 +30,11 @@ Steps
 1. Win + R
 2. lusrmgr.msc
 3. Local Users and Groups app
+
+### PowerShell
+#### Execution policy
+
+```Get-ExecutionPolicy```
+```Get-ExecutionPolicy -list```
+
+```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```
