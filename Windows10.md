@@ -23,6 +23,7 @@ Win + Ctrl + Right Arrow  | Switch Desktop
 Win + Ctrl + F4 | Close the desktop, you're currently on
 
 ### Add or remove user from group
+Steps\
 1. Win + R
 2. lusrmgr.msc
 3. Local Users and Groups app
