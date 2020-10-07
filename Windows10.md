@@ -1,7 +1,7 @@
 ## Windows 10
 
 ### Keyboard shortcuts
- | 
+| | | 
 - | -
 Win + D | Minimize all open windows (Works as toggle button)
 Win + Down Arrow | Minimize active window
