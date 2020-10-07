@@ -26,7 +26,7 @@ Win + Ctrl + Right Arrow  | Switch Desktop
 Win + Ctrl + F4 | Close the desktop, you're currently on
 
 ### Useful commands
-netstat\
+netstat
 
 telnet\
 Checks ports whether they are open or not
