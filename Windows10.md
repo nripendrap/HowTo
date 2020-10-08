@@ -26,10 +26,16 @@ Win + Ctrl + Right Arrow  | Switch Desktop
 Win + Ctrl + F4 | Close the desktop, you're currently on
 
 ### Useful commands
-netstat
+### Network diagnostic commands
+*netstat*\
+Checks network configuration and activity
+
 
 telnet\
-Check individual ports whether they are open or not
+Check ports whether they are open or not
+
+tracert\
+Displays routes or paths taken to reach destination
 
 ### Add or remove user from group
 Steps
