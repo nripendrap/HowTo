@@ -1,6 +1,6 @@
-## Windows 10
+# Windows 10
 
-### Keyboard shortcuts
+## Keyboard shortcuts
 #### General
 Key | Description 
 -- | --
@@ -25,23 +25,18 @@ Win + Ctrl + Left Arrow | Switch Desktop
 Win + Ctrl + Right Arrow  | Switch Desktop
 Win + Ctrl + F4 | Close the desktop, you're currently on
 
-### Useful commands
+## Useful commands
 ### Network diagnostic commands
+*ping*\
+
 *netstat*\
 Checks network configuration and activity
 
-
-telnet\
+*telnet*\
 Check ports whether they are open or not
 
-tracert\
+*tracert*\
 Displays routes or paths taken to reach destination
-
-### Add or remove user from group
-Steps
-1. Win + R
-2. lusrmgr.msc
-3. Local Users and Groups app
 
 ### PowerShell
 #### Execution policy
@@ -50,3 +45,9 @@ Steps
 ```Get-ExecutionPolicy -list```
 
 ```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```
+
+## Add or remove user from group
+Steps
+1. Win + R
+2. lusrmgr.msc
+3. Local Users and Groups app
