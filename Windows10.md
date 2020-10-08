@@ -27,15 +27,15 @@ Win + Ctrl + F4 | Close the desktop, you're currently on
 
 ## Useful commands
 ### Network diagnostic commands
-*ping*\
+```ping```
 
-*netstat*\
+```netstat```
 Checks network configuration and activity
 
-*telnet*\
+```telnet```
 Check ports whether they are open or not
 
-*tracert*\
+```tracert```
 Displays routes or paths taken to reach destination
 
 ### PowerShell
