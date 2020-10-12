@@ -70,6 +70,8 @@ Could not read script '<other path>\android\capacitor-cordova-android-plugins\co
 
 Delete android folder
 Rebuild
+https://capacitorjs.com/docs/android/troubleshooting#recreating-your-project
+
 
 Get the current network status
 ================================
