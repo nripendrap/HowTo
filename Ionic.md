@@ -13,7 +13,7 @@ chrome://inspect/#devices
 
 Issues
 ------
-#### Issue #1
+###### Issue #1
       PS <filepath>\ionic> ionic capacitor add android
       > capacitor.cmd add android
       [error] Capacitor could not find the web assets directory "<filepath>\www".
@@ -30,14 +30,14 @@ Issues
 Soln:
 ionic build
 
-Issue #2
+###### Issue #2
 failed to load resource: net::err_cleartext_not_permitted in ionic app capacitor
 
 Soln:
 https://github.com/ionic-team/capacitor/issues/2118
 
 
-Issue #3
+###### Issue #3
 WebApi hosted on iis and android emulator connection refused
 
 Localhost refers to your local machine. It's a common mistake that people think that the Android emulator (or iOS for that matter) is also part of localhost since it is running on the same machine. But this isn't the case.
@@ -47,12 +47,12 @@ It seems that you already discovered this. When using the 10.0.2.2 address you r
 
 https://html.developreference.com/article/12038514/How+to+access+localhost+from+android+emulator%3F
 
-Issue #4
+###### Issue #4
 Binding IIS to an IP address
 
 Allow port listening
 
-Issue #5
+###### Issue #5
 Binding IIS Express to an IP address
 Go to <solution folder> ->.vs -><solution folder name>->config
 Edit applicationhost.config file manually 
@@ -62,7 +62,7 @@ as
 
 Run IIS Express as admin. To run IIS Express as admin, Open Visual studio as admin and run the project. 
 
-Issue #6
+###### Issue #6
 Could not read script '<other path>\android\capacitor-cordova-android-plugins\cordova.variables.gradle' as it does not exist
 
 Delete android folder
