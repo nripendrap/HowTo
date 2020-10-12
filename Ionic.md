@@ -4,11 +4,8 @@ Run following commands:
 
 1. ionic integrations enable capacitor
 2. ionic capacitor add android
-3. ionic capacitor run android
-
-push www directory to respective platform
-4. npx cap copy
-
+3. ionic capacitor copy android
+4. ionic capacitor run android
 
 Debug
 -----
@@ -16,7 +13,7 @@ chrome://inspect/#devices
 
 Issues
 ------
-Issue #1
+#### Issue #1
       PS <filepath>\ionic> ionic capacitor add android
       > capacitor.cmd add android
       [error] Capacitor could not find the web assets directory "<filepath>\www".
