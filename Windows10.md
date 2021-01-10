@@ -46,6 +46,9 @@ Displays routes or paths taken to reach destination
 
 ```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```
 
+#### Open explorer from cmd from current directory
+```start .```
+
 ## Add or remove user from group
 Steps
 1. Win + R

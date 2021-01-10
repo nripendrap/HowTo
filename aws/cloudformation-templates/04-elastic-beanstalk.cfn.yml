@@ -1,0 +1,55 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "AWS CloudFormation sample template for creating an Amazon Elastic Beanstalk."
+Resources:
+
+  Application:
+    Type: AWS::ElasticBeanstalk::Application
+    Properties:
+      ApplicationName: americano-elastic-beanstalk-application
+      Description: AWS Elastic Beanstalk sample application
+
+  ApplicationVersion:
+    Type: AWS::ElasticBeanstalk::ApplicationVersion
+    Properties:
+      ApplicationName: !Ref Application
+      SourceBundle:
+        S3Bucket: elastic-beanstalk-samples
+        S3Key: helloworld-net.zip
+
+  Environment:
+    Type: AWS::ElasticBeanstalk::Environment
+    Properties:
+      EnvironmentName: americano-elastic-beanstalk-environment
+      ApplicationName: !Ref Application
+      VersionLabel: !Ref ApplicationVersion
+      SolutionStackName: 64bit Amazon Linux 2 v2.1.1 running .NET Core
+      OptionSettings: 
+          # Load balanced options
+        - Namespace: aws:elasticbeanstalk:environment
+          OptionName: EnvironmentType
+          Value: LoadBalanced
+        - Namespace: aws:elasticbeanstalk:environment
+          OptionName: LoadBalancerType
+          Value: application
+
+          # Autoscaling options
+        - Namespace: aws:autoscaling:asg
+          OptionName: MinSize
+          Value: 1
+        - Namespace: aws:autoscaling:asg
+          OptionName: MaxSize
+          Value: 4
+        - Namespace: aws:autoscaling:launchconfiguration
+          OptionName: IamInstanceProfile
+          Value: aws-elasticbeanstalk-ec2-role
+          
+          # VPC options
+        - Namespace: aws:ec2:vpc
+          OptionName: VPCId
+          Value: !ImportValue VPC
+        - Namespace: aws:ec2:vpc
+          OptionName: Subnets
+          Value: !ImportValue PrivateSubnets
+        - Namespace: aws:ec2:vpc
+          OptionName: ELBSubnets
+          Value: !ImportValue PublicSubnets

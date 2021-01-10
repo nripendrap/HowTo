@@ -1,0 +1,39 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: 
+  Sample template showing how to create a DB instance with Enhanced Monitoring enabled. 
+  **WARNING** This template creates an RDS DB instance. You will be billed for the AWS 
+  resources used if you create a stack from this template."
+
+Resources:
+  CacheSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      Description: Cache private subnet group
+      SubnetIds:
+        - !ImportValue PrivateSubnet1
+        - !ImportValue PrivateSubnet2
+        - !ImportValue PrivateSubnet3
+  CacheSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Cache security group
+      SecurityGroupIngress:
+        - FromPort: 6379
+          IpProtocol: tcp
+          SourceSecurityGroupName: !ImportValue BastionSecurityGroup
+          ToPort: 6379
+        - FromPort: 6379
+          IpProtocol: tcp
+          SourceSecurityGroupName: !ImportValue WebServerSecurityGroup
+          ToPort: 6379
+  
+  CacheCluster:
+    Type: AWS::ElastiCache::CacheCluster
+    Properties:
+      AutoMinorVersionUpgrade: true
+      Engine: redis
+      CacheNodeType: cache.t2.micro
+      NumCacheNodes: 1
+      CacheSubnetGroupName: !Ref CacheSubnetGroup
+      VpcSecurityGroupIds:
+        - !GetAtt CacheSecurityGroup.GroupId
