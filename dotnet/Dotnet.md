@@ -1,6 +1,6 @@
-# Add config file in dotnet core console application
+## Add config file in dotnet core console application
 
-1. Add IConfiguration and ConfigurationBuilder nuget packages.
+1. Add IConfiguration and ConfigurationBuilder NuGet packages.
 
 ```
 Install-Package Microsoft.Extensions.Configuration
@@ -28,14 +28,15 @@ IConfiguration Configuration = new ConfigurationBuilder()
 
 
 
-dotnet ef ...
+## 
+dotnet ef ... \
 Could not execute because the specified command or file was not found. Possible reasons for this include: * You misspelled a built-in dotnet command. * You intended to execute a .NET program, but dotnet-ef does not exist. * You intended to run a global tool, but a dotnet-prefixed executable with this name could not be found on the PATH.
 
 ```
 dotnet tool install --global dotnet-ef
 ```
 
-dotnet ef migrations add initial
+dotnet ef migrations add initial\
 dotnet ef database update
 
 
