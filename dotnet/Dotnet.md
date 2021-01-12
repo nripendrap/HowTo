@@ -1,8 +1,6 @@
-Configuration in dotnet core console application
-----------------------------------------
+# Add config file in dotnet core console application
 
-IConfiguration and ConfigurationBuilder are needed.
-
+1. Add IConfiguration and ConfigurationBuilder nuget packages.
 
 ```
 Install-Package Microsoft.Extensions.Configuration
@@ -12,23 +10,21 @@ Install-Package Microsoft.Extensions.Configuration.EnvironmentVariables
 Install-Package Microsoft.Extensions.Configuration.Binder
 ```
 
-Add a json configuration file called appsettings.json
+2. Add a json configuration file called appsettings.json
 
-```
+`
 IConfiguration Configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
     .AddEnvironmentVariables()
     .AddCommandLine(args)
     .Build();
-```
+`
 
-Adding appsettings.json file to dotnet core console app
----------------------------------------------
-
-Select and right click appsettings.json file
-Select Properties
-Under Advanced -> Copy to Output Directory 
-Select Copy always/Copy if newer
+3. Update appsettings.json file "Copy to Output Directory" property so that the application is able to access it when published.
+    1. Select and right click appsettings.json file
+    2. Select Properties
+    3. Under Advanced -> Copy to Output Directory 
+    4. Select Copy always/Copy if newer
 
 
 
