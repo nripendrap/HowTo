@@ -12,13 +12,13 @@ Install-Package Microsoft.Extensions.Configuration.Binder
 
 2. Add a json configuration file called appsettings.json
 
-`
+```
 IConfiguration Configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
     .AddEnvironmentVariables()
     .AddCommandLine(args)
     .Build();
-`
+```
 
 3. Update appsettings.json file "Copy to Output Directory" property so that the application is able to access it when published.
     1. Select and right click appsettings.json file
