@@ -3,16 +3,15 @@
 ## Create VPC, Public Subnets and Private Subnets
 #### VPC
 
-Your VPCs -> Create VPC 
-
-Create VPC
-
-VPC Settings
+1. Your VPCs -> Create VPC 
+2. Create VPC
+3. VPC Settings
+```
 Name tag: americano-vpc
 IPv4 CIDR Block: 10.0.0.0/16
 IPv6 CIDR block: No IPv6 CIDR block
 Tenancy: Default
-
+```
 
 
 02. Subnet
