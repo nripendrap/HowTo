@@ -50,8 +50,8 @@ Displays routes or paths taken to reach destination
 ```start .```
 
 #### Execute multiple PS commands on one line
-Use semicolon between commands. For example:
-
+Use semicolon between commands. \
+For example: \
 ```git add .; git commit -m "files updated"; git push origin develop```
 
 ## Add or remove user from group
