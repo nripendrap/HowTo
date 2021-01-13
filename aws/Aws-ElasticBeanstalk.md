@@ -176,7 +176,7 @@ Target: americano-nat-gateway
 14. Press "Save routes" button
 15. Then "Close" button
 
-## Security Group
+## Create Security Groups
 Create 3 security groups
 
 1. Create security groups
