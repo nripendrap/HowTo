@@ -55,7 +55,7 @@ IPv4 CIDR block: 10.0.1.0/24
 14. Press "Create subnet" button
 
 #### Private Subnets
-Create 3 private subnets in 3 availability zone
+Create 3 private subnets in 3 availability zones
 
 1. Subnets -> Create subnet
 2. Create subnet
@@ -97,7 +97,8 @@ IPv4 CIDR block: 10.0.102.0/24
 ```
 15. Press "Create subnet" button
 
-03. Internet Gateways
+## Create Internet Gateways, Route Tables and NAT Gateways
+#### Internet Gateways
 
 so public subnet can communicate with internet and internet can access instances inside public subnet
 
@@ -120,7 +121,7 @@ Available VPCs: americano-vpc
 Press "Attach internet gateway" button
 
 
-04. Route Tables
+#### Route Tables
 
 Create route table for internet gateway
 
@@ -148,7 +149,7 @@ Then "Close" button
 
 
 
-05. NAT Gateways
+#### NAT Gateways
 So private subsets can go through internet
 
 NAT Gateways -> Create NAT gateway
