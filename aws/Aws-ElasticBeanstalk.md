@@ -1,7 +1,7 @@
 # Aws Getting Started
 
 ## Create VPC, Public Subnets and Private Subnets
-*VPC*
+#### VPC
 
 Your VPCs -> Create VPC 
 
