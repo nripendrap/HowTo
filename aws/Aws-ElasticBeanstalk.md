@@ -177,49 +177,49 @@ Target: americano-nat-gateway
 15. Then "Close" button
 
 ## Security Group
+Create 3 security groups
 
-    Create security groups
-
-    06.01
-        Basic details
-        Security group name: americano-bastion-sg
-        Description: Bastion server security group
-        VPC: americano-vpc
-
-        Inbound rules
-        Press Add rule button
-        Type: SSH
-        IP: 0.0.0.0/0
-
-        Click "Create security group" button
-
-    06.02
-        Basic details
-        Security group name: americano-web-servers-sg
-        Description: Web servers security group
-        VPC: americano-vpc
-
-        Click "Create security group" button
-
-    06.03
-        Basic details
-        Security group name: americano-postgres-sg
-        Description: Postgres database security group
-        VPC: americano-vpc
-
-        Inbound rules
-        Press Add rule button
-        Type: PostgreSQL
-        Source: americano-bastion-security-group
-
-        Press Add rule button
-        Type: PostgreSQL
-        Source: americano-web-servers-security-group
-
-        Click "Create security group" button
-
-
-
+1. Create security groups
+2. Basic details
+```
+Security group name: americano-bastion-sg
+Description: Bastion server security group
+VPC: americano-vpc
+```
+3. Inbound rules
+4. Press Add rule button
+```
+Type: SSH
+IP: 0.0.0.0/0
+```
+5. Click "Create security group" button
+6. Create security groups
+7. Basic details
+```
+Security group name: americano-web-servers-sg
+Description: Web servers security group
+VPC: americano-vpc
+```
+8. Click "Create security group" button
+9. Create security groups
+10. Basic details
+```
+Security group name: americano-postgres-sg
+Description: Postgres database security group
+VPC: americano-vpc
+```
+11. Inbound rules
+12. Press Add rule button
+```
+Type: PostgreSQL
+Source: americano-bastion-security-group
+```
+13. Press Add rule button
+```
+Type: PostgreSQL
+Source: americano-web-servers-security-group
+```
+14. Click "Create security group" button
 
 Configure RDS with Postgres
 -----------------------
