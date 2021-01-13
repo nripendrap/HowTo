@@ -49,6 +49,10 @@ Displays routes or paths taken to reach destination
 #### Open explorer from cmd from current directory
 ```start .```
 
+#### Execute multiple PS commands on one line
+Use semicolon between commands. For example:
+```git add .; git commit -m "files updated"; git push origin develop```
+
 ## Add or remove user from group
 Steps
 1. Win + R
