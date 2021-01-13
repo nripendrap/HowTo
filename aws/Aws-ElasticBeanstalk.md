@@ -12,7 +12,9 @@ IPv6 CIDR block: No IPv6 CIDR block
 Tenancy: Default
 ```
 
-#### Subnet
+#### Public Subnets
+Create 3 public subnets in 3 availability zones
+
 1. Subnets -> Create subnet
 2. Create subnet
 3. VPC:
@@ -52,37 +54,48 @@ IPv4 CIDR block: 10.0.1.0/24
 ```
 14. Press "Create subnet" button
 
+#### Private Subnets
 Create 3 private subnets in 3 availability zone
 
-VPC: 
+1. Subnets -> Create subnet
+2. Create subnet
+3. VPC: 
+```
 VPC ID: americano-vpc
-
-Subnet settings:
+```
+4. Subnet settings:
+```
 Subnate name: americano-private-subnet-a
 Availability Zone: Asia Pacific (Sydney) / ap-southeast-2a
 IPv4 CIDR block: 10.0.100.0/24
-
-Press "Create subnet" button
-
-VPC: 
+```
+5. Press "Create subnet" button
+6. Subnets -> Create subnet
+7. Create subnet
+8. VPC: 
+```
 VPC ID: americano-vpc
-
-Subnet settings:
+```
+9. Subnet settings:
+```
 Subnate name: americano-private-subnet-c
 Availability Zone: Asia Pacific (Sydney) / ap-southeast-2b
 IPv4 CIDR block: 10.0.101.0/24
-
-Press "Create subnet" button
-
-VPC: 
+```
+10. Press "Create subnet" button
+11. Subnets -> Create subnet
+12. Create subnet
+13. VPC: 
+```
 VPC ID: americano-vpc
-
-Subnet settings:
+```
+14. Subnet settings:
+```
 Subnate name: americano-private-subnet-c
 Availability Zone: Asia Pacific (Sydney) / ap-southeast-2c
 IPv4 CIDR block: 10.0.102.0/24
-
-Press "Create subnet" button
+```
+15. Press "Create subnet" button
 
 03. Internet Gateways
 
