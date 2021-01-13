@@ -146,7 +146,6 @@ Target: americano-vpc-ig
 Private subnet can go through internet
 
 1. NAT Gateways -> Create NAT gateway
-
 2. Create NAT gateway
 ```
 NAT gateway settings
@@ -155,7 +154,6 @@ Subnet: americano-public-subnet-a (One of the public subnet)
 Elastic IP allocation ID: Press Allocate Elastic IP button
 ```
 3. Press Create NAT gateway button
-
 4. Then go to Route Tables page
 5. Route Tables -> Create route table
 ```
@@ -164,21 +162,19 @@ Name tag: americano-nat-gateway-route
 VPC: americano-vpc
 ```
 6. Press "Create", then "Close" button
-
 7. Select americano-nat-gateway-route row from the list
 8. Click Subnet Associations tab
 9. Click "Edit subnet associations" button
 10. Select all private subnets, i.e. americano-private-subnet-a, americano-private-subnet-b and americano-private-subnet-c
 11. Then press "Save" button
-
-11. Select Routes tab
-12. Select "Edit routes" -> Add route
+12. Select Routes tab
+13. Select "Edit routes" -> Add route
 ```
 Destination: 0.0.0.0/0
 Target: americano-nat-gateway
 ```
-13. Press "Save routes" button
-14. Then "Close" button
+14. Press "Save routes" button
+15. Then "Close" button
 
 ## Security Group
 
