@@ -99,94 +99,88 @@ IPv4 CIDR block: 10.0.102.0/24
 
 ## Create Internet Gateways, Route Tables and NAT Gateways
 #### Internet Gateways
+Public subnet can communicate with internet and internet can access instances inside public subnet
 
-so public subnet can communicate with internet and internet can access instances inside public subnet
-
-Internet Gateways -> Create internet gateway
-
-Create internet gateway
-
+1. Internet Gateways -> Create internet gateway
+2. Create internet gateway
+```
 Internet gateway settings
 Name tag:  americano-vpc-ig
-
-Press "Create internet gateway" button
-
-Attach to a VPC / Action -> Attach to VPC / Select ig-cafeamericano-vpc from the table, Click Action -> Attach to VPC
-
+```
+3. Press "Create internet gateway" button
+4. Attach to a VPC / Action -> Attach to VPC / Select ig-cafeamericano-vpc from the table, Click Action -> Attach to VPC
+```
 Attach to VPC (igw-<id>)
-
+```
+```
 VPC
 Available VPCs: americano-vpc
-
-Press "Attach internet gateway" button
-
+```
+5. Press "Attach internet gateway" button
 
 #### Route Tables
-
 Create route table for internet gateway
 
-Route Tables -> Create route table
-
-Create route table
+1. Route Tables -> Create route table
+2. Create route table
+```
 Name tag: americano-public-route
 VPC: americano-vpc
-
-Press "Create", then "Close" button
-
-Select americano-public-route row from the list
-Click Subnet Associations tab
-Click "Edit subnet associations" button
-Select all public subnets, i.e. americano-public-subnet-a, americano-public-subnet-b and americano-public-subnet-c
-Then press "Save" button
-
-Select Routes tab
-Select "Edit routes" -> Add route
+```
+3. Press "Create", then "Close" button
+4. Select americano-public-route row from the list
+5. Click Subnet Associations tab
+6. Click "Edit subnet associations" button
+7. Select all public subnets, i.e. americano-public-subnet-a, americano-public-subnet-b and americano-public-subnet-c
+8. Then press "Save" button
+9. Select Routes tab
+10. Select "Edit routes" -> Add route
+```
 Destination: 0.0.0.0/0
 Target: americano-vpc-ig
-
-Press "Save routes" button
-Then "Close" button
-
-
+```
+11. Press "Save routes" button
+12. Then "Close" button
 
 #### NAT Gateways
-So private subsets can go through internet
+Private subnet can go through internet
 
-NAT Gateways -> Create NAT gateway
+1. NAT Gateways -> Create NAT gateway
 
-Create NAT gateway
-
+2. Create NAT gateway
+```
 NAT gateway settings
 Name: americano-nat-gateway
 Subnet: americano-public-subnet-a (One of the public subnet)
 Elastic IP allocation ID: Press Allocate Elastic IP button
+```
+3. Press Create NAT gateway button
 
-Press Create NAT gateway button
-
-Then go to Route Tables page
-Route Tables -> Create route table
-
+4. Then go to Route Tables page
+5. Route Tables -> Create route table
+```
 Create route table
 Name tag: americano-nat-gateway-route
 VPC: americano-vpc
+```
+6. Press "Create", then "Close" button
 
-Press "Create", then "Close" button
+7. Select americano-nat-gateway-route row from the list
+8. Click Subnet Associations tab
+9. Click "Edit subnet associations" button
+10. Select all private subnets, i.e. americano-private-subnet-a, americano-private-subnet-b and americano-private-subnet-c
+11. Then press "Save" button
 
-Select americano-nat-gateway-route row from the list
-Click Subnet Associations tab
-Click "Edit subnet associations" button
-Select all private subnets, i.e. americano-private-subnet-a, americano-private-subnet-b and americano-private-subnet-c
-Then press "Save" button
-
-Select Routes tab
-Select "Edit routes" -> Add route
+11. Select Routes tab
+12. Select "Edit routes" -> Add route
+```
 Destination: 0.0.0.0/0
 Target: americano-nat-gateway
+```
+13. Press "Save routes" button
+14. Then "Close" button
 
-Press "Save routes" button
-Then "Close" button
-
-06. Security Group
+## Security Group
 
     Create security groups
 
