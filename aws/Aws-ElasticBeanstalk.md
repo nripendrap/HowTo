@@ -239,60 +239,57 @@ Availability Zones: ap-southeash-2a, ap-southeast-2b, ap-southeast-2c
 Subnets: 10.0.100.0/24, 10.0.101.0/24, 10.0.102.0/24
 ```
 6. Click Create button
+7. Select Databases at the left menu
+8. Select Create database button
+9. Create database:
+```
+Choose a database creation method: Select Standard create
+
+Engine options
+Engine type: Select PostgreSQL
+Version: Latest (PostgreSQL 12.4-R1)
+
+Templates: Free tier
+
+Settings:
+DB instance identifier:
+Credentials Settings:
+Master username: postgres
+Auto generate a password: Uncheck
+Master password: password
+Confirm password: password
 
 
-Select Databases at the left menu
-Select Create database button
+DB instance size:
+DB instance class:
+Burstable classes (includes t classes)
+db.t2.micro
+Include previous generation classes: off
 
-Create database:
-    
-    Choose a database creation method: Select Standard create
-    
-    Engine options
-        Engine type: Select PostgreSQL
-        Version: Latest (PostgreSQL 12.4-R1)
-    
-    Templates: Free tier
+Storage: 
+Storage type: General Purpose (SSD)
+Allocated storage: 20
+Storage autoscaling:
+Enable storage autoscaling: Uncheck
 
-    Settings:
-        DB instance identifier:
-        Credentials Settings:
-            Master username: postgres
-            Auto generate a password: Uncheck
-            Master password: password
-            Confirm password: password
+Connectivity:
+Virtual private cloud (VPC): americano-vpc
+Subnet group: americano-private-subnets
+Public access: No
+VPC security group: Choose existing
+Existing VPC security groups: americano-postgres-security-group
+Availability Zone: No preference
 
+Database authentication:
+Database authentication options: Password authentication
 
-    DB instance size:
-        DB instance class:
-            Burstable classes (includes t classes)
-            db.t2.micro
-            Include previous generation classes: off
-
-    Storage: 
-        Storage type: General Purpose (SSD)
-        Allocated storage: 20
-        Storage autoscaling:
-            Enable storage autoscaling: Uncheck
-
-    Connectivity:
-        Virtual private cloud (VPC): americano-vpc
-        Subnet group: americano-private-subnets
-        Public access: No
-        VPC security group: Choose existing
-        Existing VPC security groups: americano-postgres-security-group
-        Availability Zone: No preference
-    
-    Database authentication:
-        Database authentication options: Password authentication
-    
-    Additional configuration:
-        Backup:
-            Enable automatic backups: Uncheck
-        Performacne Insights: 
-            Enable Performance Insights: Uncheck
-    
-    Click Create database button
+Additional configuration:
+Backup:
+Enable automatic backups: Uncheck
+Performacne Insights: 
+Enable Performance Insights: Uncheck
+```
+10. Click Create database button
 
 
 Access RDS from 
