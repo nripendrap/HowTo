@@ -108,6 +108,11 @@ CodeBuild in VPC
 
 
 
+## CodeDeploy
+
+1. Create 2 roles.
+
+
 
 VPC
 

@@ -221,28 +221,24 @@ Source: americano-web-servers-security-group
 ```
 14. Click "Create security group" button
 
-Configure RDS with Postgres
------------------------
 
-Sign in to the AWS Management Console.
-Go to the Services dropdown menu at the top left corner
-Choose RDS from the menu
-
-
-
-Select Subnet Groups at the left menu
-Select Create DB Subnet Group
-
+## Configure RDS with Postgres
+1. Sign in to the AWS Management Console.
+2. Go to the Services dropdown menu at the top left corner
+3. Choose RDS from the menu
+4. Select Subnet Groups at the left menu
+5. Select Create DB Subnet Group
+```
 Create DB Subnet Group:
-    Subnet group details:
-        Name: americano-private-subnets
-        Description: Americano private database subnet group
-        VPC: americano-vpc
-    Add subnets:
-        Availability Zones: ap-southeash-2a, ap-southeast-2b, ap-southeast-2c
-        Subnets: 10.0.100.0/24, 10.0.101.0/24, 10.0.102.0/24
-
-Click Create button
+Subnet group details:
+Name: americano-private-subnets
+Description: Americano private database subnet group
+VPC: americano-vpc
+Add subnets:
+Availability Zones: ap-southeash-2a, ap-southeast-2b, ap-southeast-2c
+Subnets: 10.0.100.0/24, 10.0.101.0/24, 10.0.102.0/24
+```
+6. Click Create button
 
 
 Select Databases at the left menu
