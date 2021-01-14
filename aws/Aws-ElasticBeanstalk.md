@@ -291,10 +291,9 @@ Enable Performance Insights: Uncheck
 ```
 10. Click Create database button
 
+## Access RDS from 
 
-Access RDS from 
-
-Create bastion server:
+## Create bastion server
 
 
 AWS Beanstalk
