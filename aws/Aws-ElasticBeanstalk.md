@@ -297,18 +297,17 @@ Enable Performance Insights: Uncheck
 ## Create bastion server
 **Todo**
 
+
 AWS Beanstalk
 ------------
 
-Create dotnet MVC project
----------------------
-
-
-
+## Create dotnet MVC project
+```
 PS  C:\>mkdir beanstalk-net
 PS  C:\>cd beanstalk-net
+```
 
-##dotnet cli to scaffold our new project. Create new dotnet core mvc project, scaffold
+##### dotnet cli to scaffold our new project. Create new dotnet core mvc project, scaffold
 PS  C:\beanstalk-net>dotnet new mvc
 PS  C:\beanstalk-net>dotnet build
 PS  C:\beanstalk-net>dotnet run
