@@ -304,8 +304,8 @@ AWS Beanstalk
 ## Create dotnet MVC project
 1. Create new directory to host project
 ```
-PS >mkdir beanstalk-net
-PS >cd beanstalk-net
+PS>mkdir beanstalk-net
+PS>cd beanstalk-net
 ```
 
 ##### dotnet cli to scaffold our new project. Create new dotnet core mvc project, scaffold
