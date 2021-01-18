@@ -293,6 +293,40 @@ Enable Performance Insights: Uncheck
 
 ## Configure ElastiCache with Redis
 **Todo**
+1. Click Create button
+```
+Create your Amazon ElastiCache Cluster
+Cluster engine: Redis
+Cluster Mode enabled: Uncheck
+
+Location
+Choose a location: Amazon Cloud
+
+Redis settings
+Name:
+Description
+Engine version compatibility
+Port
+Parameter group
+Node type
+Nubmer of replicas
+Multi-AZ
+
+Advanced Redis settings
+Subnet group:
+Name:
+Description:
+VPC ID:
+Subnets:
+Availability zones placement:
+
+Security
+Security groups
+
+Backup
+Enable automatic backups: Uncheck
+```
+2. Press Create button
 
 ## Access RDS from 
 **Todo**
