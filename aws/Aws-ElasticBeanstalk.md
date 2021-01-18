@@ -302,19 +302,19 @@ AWS Beanstalk
 ------------
 
 ## Create dotnet MVC project
-1. Create new directory to host project
+1. Create a new directory to hold a project
 ```
-PS>mkdir beanstalk-net
-PS>cd beanstalk-net
+PS C:\>mkdir beanstalk-net
+PS C:\>cd beanstalk-net
 ```
-
-##### dotnet cli to scaffold our new project. Create new dotnet core mvc project, scaffold
+2. Create a new dotnet core mvc project. _Using dotnet cli to scaffold the new project._
+```
 PS  C:\beanstalk-net>dotnet new mvc
 PS  C:\beanstalk-net>dotnet build
 PS  C:\beanstalk-net>dotnet run
-
-open any browser window
-go to link http://localhost:5000
+```
+3. Open any browser window
+4. Go to link http://localhost:5000
 
 Include EntityFramework package, postgresql and StackExchange.Redis
 
