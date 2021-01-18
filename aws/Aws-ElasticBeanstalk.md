@@ -326,13 +326,21 @@ PS  C:\beanstalk-net>dotnet add package Npgsql
 ```
 PS  C:\beanstalk-net>dotnet add package StackExchange.Redis
 ```
-
-rm -r -force .\site\
-rm .\deploy-bundle.zip
-
+7. Publish website
+```
 dotnet publish -c Release -o site
-zip file inside site
-mv .\site\deploy-bundle.zip .
+```
+8. Zip the output folder __site__ without parent directory
+``` 
+PS  C:\beanstalk-net>tar.exe -avc -f site.zip site\*
+```
+
+### Remove folder and file
+```
+C:\beanstalk-net>rm -r -force .\site\
+C:\beanstalk-net>rm .\deploy-bundle.zip
+```
+
 
 
 
