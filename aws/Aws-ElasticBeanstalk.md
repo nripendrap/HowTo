@@ -315,16 +315,17 @@ PS  C:\beanstalk-net>dotnet run
 ```
 3. Open any browser window
 4. Go to link http://localhost:5000
-
-Include EntityFramework package, postgresql and StackExchange.Redis
-
+5. Include EntityFramework and PostgreSQL NuGet package.
+```
 PS  C:\beanstalk-net>dotnet add package Microsoft.EntityFrameworkCore
 PS  C:\beanstalk-net>dotnet add package Microsoft.EntityFrameworkCore.Design
 PS  C:\beanstalk-net>dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
 PS  C:\beanstalk-net>dotnet add package Npgsql
-
-PS  C:\beanstalk-net>dotnet add package StackExchange.Redis - dotnet redis client.
-
+```
+6. Include Redis dotnet client NuGet package
+```
+PS  C:\beanstalk-net>dotnet add package StackExchange.Redis
+```
 
 rm -r -force .\site\
 rm .\deploy-bundle.zip
