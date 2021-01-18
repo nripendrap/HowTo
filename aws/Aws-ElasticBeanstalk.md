@@ -335,7 +335,7 @@ dotnet publish -c Release -o site
 PS  C:\beanstalk-net>tar.exe -avc -f site.zip site\*
 ```
 
-### Remove folder and file
+#### Remove folder and file
 ```
 C:\beanstalk-net>rm -r -force .\site\
 C:\beanstalk-net>rm .\deploy-bundle.zip
