@@ -1,5 +1,7 @@
 # Aws Getting Started
 
+![Getting Started](./aws-getting-started.jpg)
+
 ## Create VPC, Public Subnets and Private Subnets
 #### VPC
 1. Your VPCs -> Create VPC 
