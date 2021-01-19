@@ -274,7 +274,7 @@ Enable storage autoscaling: Uncheck
 
 Connectivity:
 Virtual private cloud (VPC): americano-vpc
-Subnet group: americano-private-subnets
+Subnet group: americano-db-private-subnets
 Public access: No
 VPC security group: Choose existing
 Existing VPC security groups: americano-postgres-security-group
@@ -292,7 +292,6 @@ Enable Performance Insights: Uncheck
 10. Click Create database button
 
 ## Configure ElastiCache with Redis
-**Todo**
 1. Click Create button
 ```
 Create your Amazon ElastiCache Cluster
@@ -303,25 +302,22 @@ Location
 Choose a location: Amazon Cloud
 
 Redis settings
-Name:
-Description
-Engine version compatibility
-Port
-Parameter group
-Node type
-Nubmer of replicas
-Multi-AZ
+Name: americano-elasticache
+Engine version compatibility: 6.x
+Port: 6379
+Parameter group: default.redis6.x
+Node type: cache.t2.micro
+Number of replicas: 0
 
 Advanced Redis settings
-Subnet group:
-Name:
-Description:
-VPC ID:
-Subnets:
-Availability zones placement:
+Subnet group: Create new
+Name: americano-cache-private-subnets
+VPC ID: americano-vpc
+Subnets: 10.0.100.0/24, 10.0.101.0/24, 10.0.102.0/24
+Availability zones placement: No preference
 
 Security
-Security groups
+Security groups: americano-redis-security-group
 
 Backup
 Enable automatic backups: Uncheck
