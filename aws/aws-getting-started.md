@@ -1,6 +1,6 @@
 # Aws Getting Started
 
-![AWS Getting Started](./aws-getting-started.jpg)
+![AWS Getting Started](../img/aws-getting-started.jpg)
 
 ## Create VPC, Public Subnets and Private Subnets
 #### VPC
