@@ -351,24 +351,25 @@ Platform version: 2.1.1 (Recommended)
 
 Application code: Sample application
 ```
-6. Click **Configure more options** button
+6. Click "Configure more options" button
 7. Edit Network
-8. Modify network
 ```
+Modify network
+
 Virtual private cloud(VPC)
 VPC: americano-vpc
 Instance settings:
 Public IP address: uncheck
 Instance subnets: 10.0.101.0/24, 10.0.100.0/24, 10.0.102.0/24
 ```
-9. Click **Save** button
-10. Edit Instances
+8. Click "Save" button
+9. Edit Instances
 ```
 Modify instances
 EC2 security groups: americano-webserver-sg
 ```
-11. Click **Save** button
-12. Click **Create** button
+10. Click "Save" button
+11. Click "Create" button
 
 #### Create dotnet MVC project
 1. Create a new directory to hold a project
