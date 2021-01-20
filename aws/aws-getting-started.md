@@ -338,8 +338,8 @@ Enable automatic backups: Uncheck
 1. Sign in to the AWS Management Console.
 2. Go to the Services dropdown menu at the top left corner
 3. Choose Elastic Beanstalk from the menu
-4. Click **Create Application** button
-5. On **Create a web app** page, enter as follows:
+4. Click "Create Application" button
+5. On "Create a web app" page, enter as follows:
 ```
 Application information
 Application name: americano-beanstalk
