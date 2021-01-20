@@ -332,7 +332,43 @@ Enable automatic backups: Uncheck
 ## Create bastion server
 **Todo**
 
-## AWS Beanstalk
+## Create Elastic Beanstalk
+
+#### Elastic Beanstalk
+1. Sign in to the AWS Management Console.
+2. Go to the Services dropdown menu at the top left corner
+3. Choose Elastic Beanstalk from the menu
+4. Click **Create Application** button
+5. On **Create a web app** page, enter as follows:
+```
+Application information
+Application name: americano-beanstalk
+
+Platform
+Platform: .NET Core on Linux
+Platform branch: .NET Core running on 64bit Amazon Linux 2
+Platform version: 2.1.1 (Recommended)
+
+Application code: Sample application
+```
+6. Click **Configure more options** button
+7. Edit Network
+8. Modify network
+```
+Virtual private cloud(VPC)
+VPC: americano-vpc
+Instance settings:
+Public IP address: uncheck
+Instance subnets: 10.0.101.0/24, 10.0.100.0/24, 10.0.102.0/24
+```
+9. Click **Save** button
+10. Edit Instances
+```
+Modify instances
+EC2 security groups: americano-webserver-sg
+```
+11. Click **Save** button
+12. Click **Create** button
 
 #### Create dotnet MVC project
 1. Create a new directory to hold a project
@@ -373,6 +409,8 @@ PS  C:\beanstalk-net>tar.exe -avc -f site.zip site\*
 C:\beanstalk-net>rm -r -force .\site\
 C:\beanstalk-net>rm .\deploy-bundle.zip
 ```
+
+####
 
 
 
