@@ -330,7 +330,37 @@ Enable automatic backups: Uncheck
 **Todo**
 
 ## Create bastion server
-**Todo**
+1. Sign in to the AWS Management Console.
+2. Go to the Services dropdown menu at the top left corner
+3. Choose EC2 from the menu
+4. Click Launch Instance button
+5. Select Amazon Linux instance
+6. Choose an Instance Type: t2.micro
+7. Select Next: Configure Instance Details button
+8. On Step 3: Configure Instance Details page, enter as follows
+```
+Network: americano-vpc
+Subnet: Public Subnet A
+Auto-assign Public IP: Enable
+```
+9. Click Next: Add Storage button
+10. Click Next: Add Tags button
+11. On Step 5: Add Tags page, press Add Tag button
+12. Enter as follows
+```
+Key: Name
+Value: Bastion server
+```
+13. Click Next: Configure Security Group
+14. On Step 6: Configure Security Group page, select americano-bastion-sg
+15. Click Review and Launch
+16. Click Launch button
+17. In the Select an existing key pair or create a new key pair dialog box, choose Create a new key pair, enter a name for the key pair, and then choose Download Key Pair
+18. Select the acknowledgement check box
+19. Choose Launch instances
+20. A confirmation page lets you know that your instance is launching
+21. Choose View Instances to close the confirmation page and return to the console.
+
 
 ## Create Elastic Beanstalk
 
