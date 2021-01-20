@@ -1,0 +1,77 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "AWS CloudFormation sample template for creating an Amazon RDS DB instance.
+  **WARNING** This template creates an RDS DB instance. You will be billed for the AWS
+  resources used if you create a stack from this template."
+Parameters: 
+  DBInstanceID:
+    Default: pgdbinstance
+    Description: My database instance
+    Type: String
+    MinLength: '1'
+    MaxLength: '63'
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: >-
+      Must begin with a letter and must not end with a hyphen or contain two
+      consecutive hyphens.
+  DBName: 
+    Default: pgdb
+    Description : The database name
+    Type: String
+    MinLength: '1'
+    MaxLength: '64'
+    AllowedPattern : '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription : Must begin with a letter and contain only alphanumeric characters.
+  DBInstanceClass: 
+    Default: db.t2.micro
+    Description: Database instance class
+    Type: String
+    ConstraintDescription: Must select a valid DB instance type.
+  DBAllocatedStorage: 
+    Default: '50'
+    Description : The size of the database (GiB)
+    Type: Number
+    MinValue: '5'
+    MaxValue: '1024'
+    ConstraintDescription : must be between 20 and 65536 GiB
+  DBUsername: 
+    Default: postgres
+    NoEcho: 'true'
+    Description: The database admin account username
+    Type: String
+    MinLength: '1'
+    MaxLength: '16'
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription : must begin with a letter and contain only alphanumeric characters.
+  DBPassword: 
+    Default: password
+    NoEcho: 'true'
+    Description : The database admin account password
+    Type: String
+    MinLength: '8'
+    MaxLength: '41'
+    AllowedPattern: '[a-zA-Z0-9]*'
+    ConstraintDescription: must contain only alphanumeric characters.
+
+Resources:
+  DBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: DB Private Subnet Group
+      SubnetIds: 
+        - !ImportValue PrivateSubnet1
+        - !ImportValue PrivateSubnet2
+        - !ImportValue PrivateSubnet3
+
+  DBInstance:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceIdentifier: !Ref DBInstanceID
+      DBName: !Ref DBName
+      AllocatedStorage: !Ref DBAllocatedStorage
+      DBInstanceClass: !Ref DBInstanceClass
+      Engine: postgres
+      MasterUsername: !Ref DBUsername
+      MasterUserPassword: !Ref DBPassword
+      DBSubnetGroupName: !Ref DBSubnetGroup
+      VPCSecurityGroups:
+        - !ImportValue PostgresSecurityGroup
