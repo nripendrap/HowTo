@@ -326,9 +326,6 @@ Enable automatic backups: Uncheck
 ```
 2. Press Create button
 
-## Access RDS from 
-**Todo**
-
 ## Create bastion server
 1. Sign in to the AWS Management Console.
 2. Go to the Services dropdown menu at the top left corner
@@ -360,6 +357,35 @@ Value: Bastion server
 19. Choose Launch instances
 20. A confirmation page lets you know that your instance is launching
 21. Choose View Instances to close the confirmation page and return to the console.
+
+## Access RDS from bastion server
+1. Get bastion server IPv4 Public IP address
+2. SSH to bastion server
+3. Open command line shell
+4. Use the following SSH command to connect to the instance
+```
+ssh -i <location of the private key file> ec2-user@<public_dns_name>
+```
+5. 
+```
+sudo yum update
+```
+6. Install PostgreSQL client
+```
+sudo yum install postgresql95
+```
+7. Connect to the database
+```
+psql -h <rds end point> -p 5432 -U test -d postgresql
+```
+8. Quit database
+```
+postgres>\q
+```
+9. Out the of instance
+```
+exit
+```
 
 
 ## Create Elastic Beanstalk
