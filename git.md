@@ -3,6 +3,9 @@ posh-git
 
 # Useful git commands
 
+### View git configuration
+PS>git config --list
+
 PS>git branch
 
 

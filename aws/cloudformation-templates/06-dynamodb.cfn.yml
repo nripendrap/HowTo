@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'AWS CloudFormation sample template for creating an DynamoDB table'
+Parameters:
+  TableName:
+    Default: hsl-QRServiceUserTbl
+    Description: Table name for QRService application
+    Type: String
+    MinLength: 1
+    MaxLength: 40
+  ReadCapacityUnits:
+    Description: Provisioned read throughput
+    Type: Number
+    Default: 1
+    MinValue: 1
+    MaxValue: 5
+    ConstraintDescription: Must be between 1 and 5
+  WriteCapacityUnits:
+    Description: Provisioned write throughput
+    Type: Number
+    Default: 1
+    MinValue: 1
+    MaxValue: 5
+    ConstraintDescription: Must be between 1 and 5
+Resources:
+  DynamoDbTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: Id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: Id
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: !Ref ReadCapacityUnits
+        WriteCapacityUnits: !Ref WriteCapacityUnits
+      TableName: !Ref TableName
+Outputs:
+  TableName:
+    Value: !Ref DynamoDbTable
+    Description: Table name of the newly created DynamoDB table
