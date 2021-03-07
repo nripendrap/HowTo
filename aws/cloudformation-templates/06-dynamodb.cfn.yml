@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: 'AWS CloudFormation sample template for creating an DynamoDB table'
 Parameters:
   TableName:
-    Default: hsl-QRServiceUserTbl
+    Default: moh-QRServiceUserTbl
     Description: Table name for QRService application
     Type: String
     MinLength: 1
@@ -21,6 +21,12 @@ Parameters:
     MinValue: 1
     MaxValue: 5
     ConstraintDescription: Must be between 1 and 5
+  TimeToLiveAttributeName:
+    Default: ExpiresAt
+    Description: Attribute name for TTL
+    Type: String
+    MinLength: 1
+    MaxLength: 40
 Resources:
   DynamoDbTable:
     Type: AWS::DynamoDB::Table
@@ -35,6 +41,9 @@ Resources:
         ReadCapacityUnits: !Ref ReadCapacityUnits
         WriteCapacityUnits: !Ref WriteCapacityUnits
       TableName: !Ref TableName
+      TimeToLiveSpecification:
+        AttributeName: !Ref TimeToLiveAttributeName
+        Enabled: true
 Outputs:
   TableName:
     Value: !Ref DynamoDbTable

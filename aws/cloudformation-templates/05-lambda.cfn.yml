@@ -1,0 +1,67 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS CloudFormation sample template for Lambda.
+Resources:
+  LambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: lambda_exec_test-DemoAWSLambda
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action:
+            - sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service:
+              - lambda.amazonaws.com        
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AWSLambdaExecute
+        - arn:aws:iam::aws:policy/AmazonS3FullAccess
+        - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
+        - arn:aws:iam::aws:policy/AmazonKinesisFullAccess
+      Path: /
+  LambdaLayer:
+    Type: AWS::Lambda::LayerVersion
+    Properties:
+      CompatibleRuntimes:
+        - dotnetcore3.1
+      Content:
+        S3Bucket:
+        S3Key:
+      LayerName: 
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: test-DemoAWSLambda
+      Description: LambdaFunction of .NET Core 3.1 (C#/Powershell).
+      Runtime: dotnetcore3.1
+      Code:
+        S3Bucket: hsl-lambdas-bck
+        S3Key: code/DemoAWSLambda.zip
+      Handler: DemoAWSLambda::DemoAWSLambda.Function::FunctionHandler
+      MemorySize: 256
+      Timeout: 30
+      Role:
+        !GetAtt:
+          - LambdaRole
+          - Arn
+      Layers:
+        - !GetAtt
+            - LambdaLayer
+            - Arn
+Outputs:
+  LambdaRoleARN:
+    Description: Role for Lambda execution.
+    Value:
+      Fn::GetAtt:
+        - LambdaRole
+        - Arn
+  LambdaFunctionName:
+    Value:
+      Ref: LambdaFunction
+  LambdaFunctionARN:
+    Description: Lambda function ARN.
+    Value:
+      Fn::GetAtt:
+        - LambdaFunction
+        - Arn
