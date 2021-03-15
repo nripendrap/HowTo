@@ -46,8 +46,12 @@ Displays routes or paths taken to reach destination
 
 ```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```
 
-#### Open explorer from cmd from current directory
+#### Open File Explorer from cmd from current directory
 ```start .```
+
+#### Open PowerShell from right click context menu
+1. Shift + Right Click the folder / Shift + Menu Key
+2. Then select _Open PowerShell window here_ menu
 
 #### Execute multiple PS commands on one line
 Use semicolon between commands. \
