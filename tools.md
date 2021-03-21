@@ -4,7 +4,7 @@
 2. Visual Studio Code \
     https://code.visualstudio.com
     ###### Extension for Visual Studio Code
-    i. Markdown Preview Enhanced
+    i. Markdown Preview Enhanced \
     ii. C# for Visual Studio Code (powered by OmniSharp)
 3. Visual Studio 2019
 4. Microsoft SQL Server Management Studio 18
