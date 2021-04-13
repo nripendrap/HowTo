@@ -45,6 +45,15 @@ dotnet tool install --global dotnet-ef
 services.AddControllersWithViews().AddRazorRuntimeCompilation();
 ```
 
+## Prevent favicon.ico requests
+__Issue__ \
+When made a http request to the web page from the browser, it also make request to favicon.ico, though I don't favicon.ico in the web page.
+__Soln__ \
+Add following line to the &lt;head&gt; section
+```
+<link rel="icon" href="data:,">
+```
+
 
 
 
