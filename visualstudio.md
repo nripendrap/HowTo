@@ -5,3 +5,11 @@ The dialog is accessed by right-clicking on a folder and choosing Add->Client Si
 The "Manage Client-Side Libraries" command opens libman.json to allow you to remove or change versions. When you save the file, LibMan will automatically update the downloaded files.
 
 We understand that this is a little confusing, so we'll keep this item open to review the UX for the feature.
+
+## Unable to connect to web server 'IIS Express'
+1. Stop IIS Express
+2. Close Visual Studio
+3. Delete hidden folder __.vs__ under Visual Studio project solution folder
+4. Delete __config__ folder under __%DOCUMENTS%\IISExpress__
+5. Restart your PC
+5. Run Visual Studio as Administrator
