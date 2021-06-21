@@ -54,6 +54,16 @@ Add following line to the &lt;head&gt; section
 <link rel="icon" href="data:,">
 ```
 
-
-
-
+## dotnet CLI commands
+__List installed templates__
+```
+dotnet new --list
+```
+__Create solution file__
+```
+dotnet new sln
+```
+__Add project to the solution__
+```
+dotnet sln add .\src\Cafedulait.IdentityServer4\Cafedulait.IdentityServer4.csproj
+```

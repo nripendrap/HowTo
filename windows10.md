@@ -31,6 +31,10 @@ Win + Ctrl + F4 | Close the desktop, you're currently on
 
 ```netstat```
 Checks network configuration and activity
+\
+__Example:__
+1. Find out which application is using the port.
+    ```netstat -ao | findstr <port_number_to_search_for>```
 
 ```telnet```
 Check ports whether they are open or not
