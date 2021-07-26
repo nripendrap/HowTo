@@ -4,6 +4,8 @@
 
 #### Create scroll to top of the page button
 
+#### Composer PHP
+
 #### Send Email using _SendGrid_ and PHP
 
 #### Add _Google reCAPTCHA_ to a Form (PHP/HTML)

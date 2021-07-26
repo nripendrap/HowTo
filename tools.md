@@ -14,3 +14,4 @@
 6. Sourcetree
 7. PowerToys
 8. Anaconda - Python distribution platform
+9. KeePass
