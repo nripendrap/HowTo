@@ -99,6 +99,18 @@ IPv4 CIDR block: 10.0.102.0/24
 ```
 15. Press "Create subnet" button
 
+---
+
+#### The "5 Things" required for Internet traffic
+1. Public IP Address
+2. Internet Gateway Attached to a VPC
+3. Route to an Internet Gateway
+4. NACL Allow Rule
+5. Security Group Allow Rule
+
+source: AWS re:Invent 2019: AWS networking fundamentals (NET201-R2)
+
+
 ## Create Internet Gateways, Route Tables and NAT Gateways
 #### Internet Gateways
 Public subnet can communicate with internet and internet can access instances inside public subnet
@@ -223,6 +235,12 @@ Source: americano-web-servers-security-group
 ```
 14. Click "Create security group" button
 
+---
+## Elastic Load Balancing
+
+ToDo
+
+---
 
 ## Configure RDS with Postgres
 1. Sign in to the AWS Management Console.
