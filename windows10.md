@@ -63,7 +63,10 @@ For example: \
 ```git add .; git commit -m "files updated"; git push origin develop```
 
 ## Add or remove user from group
-Steps
-1. Win + R
-2. lusrmgr.msc
-3. Local Users and Groups app
+1. Select __Run__ from the __Start__ menu or alternatively, Press Win + R to bring up the __Run__ command.
+2. Type _lusrmgr.msc_ and press __Enter__.
+The Local User and Group Management tool appears.
+
+## Open certificate manager
+1. Select __Run__ from the __Start__ menu, and then enter _certmgr.msc_.
+The Certificate Manager tool for the current user appears.

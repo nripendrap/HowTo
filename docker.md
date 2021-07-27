@@ -1,7 +1,8 @@
 
+## Docker
+- Installing Docker gives you the client and daemon
 
-Installing Docker gives you the client and daemon
-docker hub
+- docker hub
 
 Docker Hub: hosted repository service provided by docker for finding and sharing container images with your team.
 
