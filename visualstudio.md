@@ -1,3 +1,6 @@
+## Manage Client-Side Libraries opens libman.json, not UI Dialog
+__Issue__ 
+When 
 https://github.com/aspnet/LibraryManager/issues/411
 Manage Client-Side Libraries opens libman.json not UI Dialog
 The dialog is accessed by right-clicking on a folder and choosing Add->Client Side Library...
@@ -13,3 +16,7 @@ We understand that this is a little confusing, so we'll keep this item open to r
 4. Delete __config__ folder under __%DOCUMENTS%\IISExpress__
 5. Restart your PC
 5. Run Visual Studio as Administrator
+
+## Convert XML to Classes in Visual Studio 2019
+1. Copy XML data
+2. On the menu, select __Edit > Paste Special > Paste XML As Classes__ menu

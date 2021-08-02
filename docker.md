@@ -1,50 +1,58 @@
-
 ## Docker
 - Installing Docker gives you the client and daemon
 
-- docker hub
+#### Terminology
+__Docker Hub__ 
+hosted repository service provided by docker for finding and sharing container images with your team.
 
-Docker Hub: hosted repository service provided by docker for finding and sharing container images with your team.
-
-Container and Images
+__Container and Images__
 Images ~ Stopped containers
 Containers ~ Running images
 
-Commands
-docker run: to run a new container
-docker ps: see running and stopped containers
-docker images: list images stored locally
+#### Commands
+```docker ps``` : see running and stopped containers
+```docker images``` : list images stored locally
 
-docker pull <repository>  pull docker image from docker hub to local repository
+
+```docker pull <repository>```  pull docker image from docker hub to local repository
+
 Example
     docker pull ubuntu 
     docker pull ubuntu:14.04
 
-docker rmi <repository>:<tag>
 
-
+```docker run``` : to run a new cotainer
+```
 docker run -d <image>
-
 -d detached
 -it interactive
 docker run -d -it <image>
+```
 
-docker stop : stops the running containers
-docker rm : removes(deletes) stopped containers
+```docker stop``` : stops the running containers
 
+```docker rm ``` : removes(deletes) stopped containers
+```docker rmi <repository>:<tag>``` removes images by their Id
 
+---
 
+## Run PostgreSQL on docker locally
 
-Run PostgreSQL on docker locally
----------------------------
-
-docker pull postgres
-docker images - list images stored locally
-
-$  mkdir ${HOME}/postgres-data
-$  docker run -d --name dev-postgres -e POSTGRES_PASSWORD=password -v C:/Users/PradNrip/postgres-data/:/var/lib/postgresql/data -p 5432:5432 postgres
+1. Pull PostgreSQL image from Docker Hub
+    ```docker pull postgres```
+<br/>
+2. View list of images stored locally
+    ```docker images```
+3. Run PostgreSQL image
+    ```
+    $  mkdir ${HOME}/postgres-data
+    $  docker run -d --name dev-postgres -e POSTGRES_PASSWORD=password -v C:/Users/PradNrip/postgres-data/:/var/lib/postgresql/data -p 5432:5432 postgres```
+4. Test your container
+```
 $  docker ps
-
+```
+5. Connect via exec
+```
 $  docker exec -it dev-postgres bash
 
 root@4cfa88c05532:/# psql -h localhost -U postgres
@@ -61,6 +69,7 @@ postgres=# \l
  template1 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
            |          |          |            |            | postgres=CTc/postgres
 (3 rows)
+```
 
 $  dotnet publish -c Release -o site
 
