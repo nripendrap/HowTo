@@ -67,3 +67,8 @@ __Add project to the solution__
 ```
 dotnet sln add .\src\Cafedulait.IdentityServer4\Cafedulait.IdentityServer4.csproj
 ```
+
+## 'IServiceCollection' does not contain a definition for 'AddHttpClient' and no accessible extension  method 'AddHttpClient' accepting a first argument of type 'IServiceCollection' could be found (are you missing a using directive or an assembly reference?)
+```
+Install-Package Microsoft.Extensions.Http
+```

@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'AWS CloudFormation template for creating an empty SQL Server RDS database.'
+Resources:
+	SQLExpDatabase:
+		Type: AWS::RDS::DBInstance
+		Properties:
+			DBInstanceIdentifier: INT-X-STD-RHIP-DB-INSTANCE
+			DBInstanceClass: db.t2.micro
+			AllocatedStorage: '20'
+			Engine: sqlserver-ex
+			EngineVersion: 14.00.3381.3.v1
+			MasterUsername: healthshare
+			MasterUserPassword: P@ssw0rd.1
+	Outputs:
+		SQLExpDatabaseEndpoint:
+			Description: Database endpoint
+			Value: !Sub "${SQLExpDatabase.Endpoint.Address}:${SQLExpDatabase.Endpoint.Port}"

@@ -4,6 +4,12 @@
 
 ## Create VPC, Public Subnets and Private Subnets
 #### VPC
+Virtual Private Cloud
+The "four virtural walls" of your network inside of AWS
+Defined by the IPv4 CIDR block that will be used inside of it
+Isolated logically defined part of the AWS infrastructure that connects all of these pieces together
+
+
 1. Your VPCs -> Create VPC 
 2. Create VPC
 3. VPC Settings
@@ -108,12 +114,14 @@ IPv4 CIDR block: 10.0.102.0/24
 4. NACL Allow Rule
 5. Security Group Allow Rule
 
-source: AWS re:Invent 2019: AWS networking fundamentals (NET201-R2)
+source: AWS re:Invent 2019: AWS networking fundamentals (NET201-R2) https://www.(youtube.com/watch?v=gj4CD73Wmns)
 
 
 ## Create Internet Gateways, Route Tables and NAT Gateways
-#### Internet Gateways
-Public subnet can communicate with internet and internet can access instances inside public subnet
+Gateways provide a mechanish for traffic to enter or leave your VPC. There are several different options depending upon your needs.
+
+#### Internet gateway (IGW)
+Public subnet can communicate with internet and internet can access instances inside public subnet i.e. Allows inbound and outbound traffic to the public internet
 
 1. Internet Gateways -> Create internet gateway
 2. Create internet gateway
