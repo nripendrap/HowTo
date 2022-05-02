@@ -6,6 +6,9 @@ https://github.com/dahlbyk/posh-git
 
 # Useful git commands
 
+### Check git version
+PS> git --version
+
 ### Update git
 PS>git update-git-for-windows
 
