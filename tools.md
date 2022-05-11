@@ -1,17 +1,22 @@
 ## Useful tools
 1. Notepad++ \
-    cohttps://notepad-plus-plus.org/downloads/
-2. Vcoisual Studio Code \
+    https://notepad-plus-plus.org/downloads/
+2. Visual Studio Code \
     cohttps://code.visualstudio.com
-    co###### Extension for Visual Studio Code
-    coi. Markdown Preview Enhanced \
-    coii. C# for Visual Studio Code (powered by OmniSharp)
-3. Vcoisual Studio 2019
-4. Mcoicrosoft SQL Server Management Studio 18
-4. Gcoit \
-    cohttps://git-scm.com/downloads
-5. pcoosh-git
-6. Scoourcetree
-7. PowerToys
-8. Anaconda - Python distribution platform
-9. KeePass 2
+    ###### Extension for Visual Studio Code
+    i. Markdown Preview Enhanced \
+    ii. C# for Visual Studio Code (powered by OmniSharp)
+3. Visual Studio 2019
+4. Microsoft SQL Server Management Studio 18
+5. Git \
+    https://git-scm.com/downloads
+6. posh-git
+7. Sourcetree
+8. PowerToys
+9. Anaconda - Python distribution platform
+10. KeePass 2
+
+_AWS specific_
+
+11. AWS Tookkit for Visual Studio (AWS SDK for .NET)
+12. AWS Command Line Interface
