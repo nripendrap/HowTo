@@ -37,3 +37,29 @@ PS>git commit -m "Initial commit"
 
 
 PS>git clone 
+
+
+### Gitflow
+flow for deployment is as follows:
+1.	4 branches.
+    i.	Main
+    ii.	Test/Release
+    iii.Develop
+    iv.	Feature
+ 
+1.	Decide on feature will go in release/prod
+2.	Feature branch is created from develop branch.
+3.	Work on new feature on separate Feature branch
+4.	Feature branch that will go on release will be merged to the Develop branch
+5.	Future features won't be merged to the Develop branch.
+6.	Testing
+7.	If all feature for release are complete and merged with Develop, 
+8.	This will be cut-off/no new feature will go on.
+9.	Merge Develop branch to the Test/Release branch
+10.	Release branch is deployed to the Managed Test
+11.	Testing, any issues will be fixed in release branch
+12.	Release branch is merged to the Main and deployed to the Prod.
+13.	Release branch is merged to the Develop.
+
+Reference:
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
