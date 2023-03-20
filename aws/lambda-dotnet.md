@@ -1,3 +1,5 @@
+1. Install AWS Toolkit for Visual Studio 2017 and 2019
+
 AWS Lambda Using AWS Toolkit for Visual Studio
 
 1. Open Microsoft Visual Studio
