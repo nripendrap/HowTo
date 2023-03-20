@@ -20,3 +20,5 @@ We understand that this is a little confusing, so we'll keep this item open to r
 ## Convert XML to Classes in Visual Studio 2019
 1. Copy XML data
 2. On the menu, select __Edit > Paste Special > Paste XML As Classes__ menu
+
+## the application url cannot contain a query string or fragment

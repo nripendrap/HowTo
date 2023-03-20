@@ -67,3 +67,8 @@ Example:
 Update-Database -Migration 20180911024005_AddColumnFirstNameInUser -Context BloggingContext
 ```
 2. Then modify the code
+
+
+
+EF 6.0 
+The entity type 'Name' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
